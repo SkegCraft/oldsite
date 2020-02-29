@@ -1,0 +1,124 @@
+	#screenshot {
+		visibility: visible;
+		border: 1px solid black;
+		width: 500px;
+		height: 39vh;
+		background: url("1.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		display: flex;
+
+	}
+	#screenshot:hover {
+		background-size: 140%;
+		background-position: center;
+	}
+	html, body {
+		height: 100%; 
+		width: 100%; 
+		margin: 0; 
+		
+	}
+	#menubutton {
+		border-right: 2px solid black;
+		background-color: lightgrey;
+		text-decoration: none;
+		color: black;
+		font-family: minecraft;
+		font-size: 20px;
+		float: left;
+		width: 200px;
+		text-align: center;
+		line-height: 330%;
+		height: 100%;
+	}
+	#menubutton:hover {
+		color: white;
+		background-color: grey; 	
+	}
+	#status {
+		color: red;
+	}
+	#address {
+		cursor: auto;
+		color: blue;
+		
+	}
+	#address::selection { 
+		background-color: lightgreen; 
+	}
+	#menu {
+		width: 99%;
+		height: 10%;
+		border: 3px solid black;
+		border-radius: 1px;
+		background-color: white;
+		margin: auto;
+
+	}
+	#sidebar {
+		position: absolute;
+		width: 24%;
+		height: 69%;
+		bottom: 25px;
+		right: 0.5%;
+		border: 3px solid black;
+		border-radius: 10px;
+		background-color: white;
+		visibility: visible;
+		text-align: left;
+		overflow-y: scroll;
+	}
+	#content {
+		width: 73%;
+		height: 69%;
+		border: 3px solid black;
+		border-radius: 10px;
+		position: absolute;
+		left: 0.5%;
+		bottom: 25px;
+		background-color: white;
+		overflow-y: scroll;
+	}
+	body {
+		background-image: url("http://www.nerdtests.com/mq/testimages/259251_5423e58637983840a813.jpg");
+		background-size: 70px;
+		overflow: hidden;
+	}
+	#small {
+		font-family: minecraft;
+		color: black;
+		font-size: 30px;
+		letter-spacing: 4px;
+	}
+	#personinfo {
+		height: auto;
+		width: 450px;
+	}
+	#image {
+		vertical-align:top;
+		float: left;
+	}
+	#person {
+		height: 100px;
+		width: 450px;
+	}
+	#tiny {
+		font-family: minecraft;
+		color: black;
+		font-size: 20px;
+		letter-spacing: 4px;
+		margin-top: 0px;
+	}
+	#big {
+		font-family: minecraft;
+		color: white;
+		font-size: 70px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		letter-spacing: 4px;
+	}
+	@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SkegCraft</title>
+	<link rel="icon" type="image/png" href="icon.png" />
+	<script src="https://mcapi.us/scripts/minecraft.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+<center>
+	<h1 id="big">SkegCraft</h1>
+</center>
+<div id="menu">
+	<a href="http://skegcraft.usa.cc" id="menubutton">Home</a>
+	<a href="forums" id="menubutton">Forums</a>
+	<a href="staff" id="menubutton">Staff</a>
+	<a href="store" id="menubutton">Store</a>
+</div>
+<div id="content">
+	<center>
+		<p id="small">Welcome to SkegCraft!</p>
+		<span id="tiny">Join us at <span id="address" >mcskegcraft.usa.cc</span></span>
+		<p id="tiny">SkegCraft is a friendly Minecraft survival server.</p>
+		<div id="screenshot">
+		</div>
+	</center>
+</div>
+<div id="sidebar">
+		<center>
+			<br>
+		<span id="tiny">Status: <span id="status">OFFLINE</span></span>
+		<br><br>
+		<span id="tiny"><u>Specs</u></span>
+		</center>
+		<ul>
+			<li><span id="tiny">Hosted by my Rasberry PI (Temporary)</span></li><br>
+			<li><span id="tiny">1gb ram</span></li><br>
+			<li><span id="tiny">2gb Storage</span></li><br>
+		</ul>
+		<center>
+			<span id="tiny"><u>Info</u></span>
+		</center>
+		</center>
+		<ul style="margin-bottom: 0px;">
+			<li><span id="tiny">Started 11/20/17</span></li><br>
+			<li><span id="tiny">100 Slots (Depends on popularity)</span></li><br>
+			<li><span id="tiny">2gb Storage</span></li><br>
+		</ul>
+</div>
+</body>
+<script type="text/javascript">
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    document.getElementById('screenshot').style.display = "none";
+    document.getElementById("sidebar").style.display = "none";
+}
+ MinecraftAPI.getServerStatus('mcskegcraft.usa.cc', {
+    port: 25565 // optional, only if you need a custom port
+  }, function (err, status) {
+    if (err) {
+      return document.getElementById('status').innerHTML = 'ERROR';
+    }
+
+    // you can change these to your own message!
+    document.getElementById('status').innerHTML = status.online ? 'ONLINE' : 'OFFLINE';
+    if ( status.online ? 'ONLINE' : 'OFFLINE' == "ONLINE") {
+    	 document.getElementById('status').style.color = "green";
+    } else if ( status.online ? 'ONLINE' : 'OFFLINE' == "OFFLINE") {
+    	 document.getElementById('status').style.color = "red";
+    } else if ( status.online ? 'ONLINE' : 'OFFLINE' == "ERROR") {
+    	 document.getElementById('status').style.color = "red";
+    }
+  });
+</script>
+<style>
+	@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+}
+</style>
+</style>
+</html>
